@@ -1,0 +1,32 @@
+{
+  "name": "b2_probe_wf",
+  "description": "B2 background push probe (setup)",
+  "trigger": {
+    "condition": null,
+    "config": {
+      "trigger_type": "entity",
+      "events": [
+        "create"
+      ],
+      "entity_name": "Task"
+    }
+  },
+  "definition": {
+    "document": {
+      "dsl": "1.0.0",
+      "namespace": "base44",
+      "name": "b2_probe_wf",
+      "version": "1.0.0"
+    },
+    "do": [
+      {
+        "pause": {
+          "wait": {
+            "seconds": 1
+          },
+          "then": "end"
+        }
+      }
+    ]
+  }
+}
